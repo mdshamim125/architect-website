@@ -18,6 +18,18 @@
     padding: 0;
     box-sizing: border-box;
 }
+.text-light-gray{
+    color: var(--Dark-03, #727272);
+    line-height: 1.2rem;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+.section-title{
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #131313;
+}
+
 /* header styles */
 header{
     padding: 40px 200px;
@@ -30,11 +42,7 @@ nav{
     margin-bottom: 50px;
     gap: 50px;
 }
-.nav-title{
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #131313;
-}
+
 nav > ul{
     display: flex;
 }
@@ -60,17 +68,14 @@ nav li a{
     font-size: 3rem;
     font-weight: 700;
 }
-.banner-description{
-    color: var(--Dark-03, #727272);
-    line-height: 1.2rem;
-}
+
 .banner *{
     margin-bottom: 25px;
 }
 /* main sections styles */
 main{
     max-width: 940px;
-    margin: 0 auto;
+    margin: 50px auto;
 }
 /* teams styles */
 .teams-container{
@@ -94,7 +99,6 @@ main{
    font-size: 2.5rem;
 }
 .teams-content .quick-list{
-    color: #727272;
     font-weight: 500;
 }
 .teams-content .features{
@@ -104,6 +108,28 @@ main{
 .teams-container *{
     margin-bottom: 20px;
 }
+.facts-card-container{
+    display: flex;
+    justify-content: space-around;
+}
+.facts-card-container .card{
+    border-radius: 8px;
+    border: 1px solid #FF900E;
+    padding: 20px;
+    text-align: center;
+}
+.facts-card-container .card-title{
+    font-weight: 600;
+    color: var(--Dark-03, #727272);
+    font-size: 1.2rem;
+}
+.facts-card-container .card-stats{
+    font-size: 2.5rem;
+    color: #424242;
+} 
+
+
+
 
 /* responsive styles */
 /* for mobiles */
@@ -111,9 +137,12 @@ main{
     header{
         padding: 20px;
     }
-    nav{
+    nav, .teams-container{
         flex-direction: column;
-        gap: 20px;
+        gap: 10px;
+    }
+    .teams-container .teams-img-container{
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 /* for tablets */
@@ -121,8 +150,8 @@ main{
     header{
         padding: 40px;
     }
-    nav{
+    nav, .teams-container{
         flex-direction: column;
-        gap: 20px;
+        gap: 10px;
     }
 }
